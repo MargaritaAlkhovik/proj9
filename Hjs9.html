@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        <p>Alphabet</p>
+        <section id="light">    
+        <p> A B C D E F G </p>
+        <p>come on out and play with me.</p>
+        <p>H I J </p>
+        <p>come and play.</p> 
+        <p>K L M </p>
+        <p>come with them.</p>
+        <p>N O P </p>
+        <p>near the tree.</p>
+        <p>Q R S T U V </p>
+        <p>Oh, how happy we will be.</p>
+        <p>W X Y Z </p>
+        <p>Lot's of fun for you and me.</p>
+        </section>
+
+        <div id="al"></div>
+</article>   
+
+ <button id="but" onclick="find()">Алфавит</button>
+
+ <script>
+
+     function find() {
+
+        let alphabet = document.querySelectorAll('p:nth-child(odd)');
+       let s = ""; let p = "";
+       
+        for (i=1; i<alphabet.length; i++) {
+
+            s = alphabet[i].innerHTML;
+            p +=  ` ${s} `;
+            al.innerHTML = p;
+        }
+       
+        let a = document.getElementById('light');
+        let b = a.getElementsByTagName('p');
+
+        for (i=0; i<b.length; i++) {
+            b[i].style = `
+            border: 1px dotted orange;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 15px;
+            color: darkblue;
+            background-color: lightblue;
+            width: fit-content;
+            ` 
+        }
+        }
+ 
+ </script>
+
+</body>
+</html>
